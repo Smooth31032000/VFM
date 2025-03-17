@@ -1,0 +1,14 @@
+.ant-drawer-content {
+  background-color: var(--color-primary-light) !important;
+}
+
+.ant-drawer-close {
+  display: none !important;
+}
+
+.custom-drawer .ant-drawer-header {
+  background-color: var(--color-primary-light);
+  color: #FFFF;
+  text-align: center;
+  border-bottom: unset
+}

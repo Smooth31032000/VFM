@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+@theme {
+  --color-primary: #fe8420;
+  --color-primary-light: #fead6a;
+  --default-font-family: Roboto, sans-serif;
+  --color-error-05: #e23333;
+  --color-green-07: #6de75e;
+  --color-blue-06: #339cff;
+  --color-white: #ffffff;
+  --color-grey-10: rgba(78, 78, 78, 1);
+  --color-grey-08: rgba(132, 132, 132, 1);
+  --color-error-06: rgba(219, 0, 0, 1);
+  --color-grey-10: rgba(78, 78, 78, 1);
+  --color-organge-05: rgba(254, 157, 77, 1);
+}

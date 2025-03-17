@@ -1,0 +1,22 @@
+.total-cost {
+  border-top: 1px solid white;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding-top: 8px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.31%;
+}
+
+.price {
+  text-align: center;
+  color: #ffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.45%;
+}

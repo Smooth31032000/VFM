@@ -1,0 +1,12 @@
+.AntInput__container input {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.AntInput__readOnly {
+  pointer-events: none;
+}
+.ant-rate .ant-rate-star:not(:last-child) {
+  margin-inline-end: 1px;
+}
