@@ -5,14 +5,14 @@ import { Slider } from "~/components/Slider";
 import { ProductItemData } from "~/services/api/index";
 import { useStore } from "~/store/counterStore";
 export default function HomePage() {
-  const { addItem, counter } = useStore();
+  const { addItem } = useStore();
 
   const addDrawerItem = (id: string, name: string, price: number) => {
     const body = {
       id: id,
       name: name,
       price: price,
-      quantity: counter,
+      quantity: 1,
     };
     addItem(body);
   };

@@ -5,7 +5,6 @@ export * from "./Input";
 export * from "./PNGIcon";
 export * from "./SVGIcon";
 export * from "./Counter";
-export * from "./Drawer";
 export * from "./Dropdown";
 export * from "./ListItem";
 export * from "./Slider";

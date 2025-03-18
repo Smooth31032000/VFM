@@ -5,7 +5,7 @@ import { FC } from "react";
 import icon from "~/assets/icons/circleVertical.svg";
 import "./style.css";
 
-export const DropdownComp: FC<MenuProps> = ({ items }) => {
+export const DropdownComp: FC<MenuProps> = ({ items, className = "" }) => {
   return (
     <div>
       <Dropdown
@@ -16,7 +16,9 @@ export const DropdownComp: FC<MenuProps> = ({ items }) => {
       >
         <a onClick={(e) => e.preventDefault()}>
           <Space>
-            <img src={icon} alt="icon" />
+            <div className={` ${className}`}>
+              <img src={icon} alt="icon" />
+            </div>
           </Space>
         </a>
       </Dropdown>

@@ -11,10 +11,10 @@ export const ListItem: FC<Props> = ({
   ...props
 }) => {
   return (
-    <div className={`bg-white ${className}`} {...props}>
+    <div className={`rounded-lg bg-white ${className}`} {...props}>
       {data.map((item) => (
-        <div className="grid grid-cols-2">
-          <div className="pl-[28px]">
+        <div key={item.id} className="grid grid-cols-2">
+          <div>
             <div className="name">{item.name}</div>
             <div className="price-list">{item.price}đ</div>
           </div>
@@ -25,7 +25,7 @@ export const ListItem: FC<Props> = ({
                 onChecked?.(item.name, item.price, e.target.value)
               }
             />
-            <span className="check-mark">✔</span>
+            <span className="check-mark">✓</span>
           </label>
         </div>
       ))}

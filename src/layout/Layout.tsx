@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import { ButtonCancel, ButtonSuccess } from "~/components";
 import Header from "~/components/Header/Header";
 import { DrawerComp } from "~/features/Drawer/DrawerComp";
 import { DrawerWrapper } from "~/features/Drawer/DrawerWrapper";
@@ -28,15 +29,26 @@ export default function Layout() {
       <Header handleOnclick={showDrawer} count={counterCard} />
       <DrawerComp
         title="Sản Phẩm đã được chọn"
+        className="text-white relative"
         open={open}
         closeDrawer={closeDrawer}
       >
-        <div className="flex justify-center gap-8">
-          <p>Sản Phẩm</p>
-          <p>Giá Tiền</p>
-          <p>Số Lượng</p>
+        <div className="flex flex-col gap-5">
+          <div className="grid grid-cols-3 text-base font-normal border-b">
+            <div className="flex justify-center">Sản Phẩm</div>
+            <div className="flex justify-center">Giá Tiền</div>
+            <div className="flex justify-center">Số Lượng</div>
+          </div>
+          <DrawerWrapper
+            openDropdownId={openDropdownId}
+            data={DrawerData}
+            toggleDropdown={toggleDropdown}
+          />
         </div>
-        <DrawerWrapper data={DrawerData} toggleDropdown={toggleDropdown} />
+        <div className="flex gap-2 absolute bottom-3 right-3">
+          <ButtonCancel handleOnclick={closeDrawer} text="Huỷ" />
+          <ButtonSuccess text="Thanh Toán" />
+        </div>
       </DrawerComp>
       <main className="pt-[30px] px-5 bg-primary-light relative">
         <Outlet />

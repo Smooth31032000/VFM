@@ -1,5 +1,6 @@
+
 .ant-drawer-content {
-  background-color: var(--color-primary-light) !important;
+  border-radius: 10px 0;
 }
 
 .ant-drawer-close {
@@ -11,4 +12,8 @@
   color: #FFFF;
   text-align: center;
   border-bottom: unset
+}
+
+.ant-drawer-body {
+  background-color: var(--color-primary-light);
 }

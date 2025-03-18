@@ -2,11 +2,12 @@ import { ReactNode } from "react";
 
 export type Props = {
   title: string;
-  open: boolean
+  open: boolean;
   children?: ReactNode;
+  className?: string;
   showDrawer?: () => void;
   closeDrawer?: () => void;
-}
+};
 
 export interface DrawerInter {
   id: string;

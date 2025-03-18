@@ -26,7 +26,6 @@ export const useStore = create<DrawerState>((set) => {
   return {
     DrawerData: initialDrawerData,
     counterCard: initialDrawerData.length,
-    counter: 1,
     addItem: (item) =>
       set((state) => {
         const isExist = state.DrawerData.some(

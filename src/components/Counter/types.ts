@@ -1,7 +1,7 @@
 /** @format */
 
 export type Props = {
-  count?: number;
+  count: number;
   handleIncrease?: () => void;
   handleDecrease?: () => void;
 };

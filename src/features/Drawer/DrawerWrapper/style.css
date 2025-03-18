@@ -1,0 +1,23 @@
+.drawer-price {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.drawe-quantity {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.drawer-name {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+}
