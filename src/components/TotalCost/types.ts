@@ -1,7 +1,10 @@
 /** @format */
 
+import { ReactNode } from "react";
+
 export type Props = {
-  sum: number;
+  children?: ReactNode;
+  totalCost: number;
   VAT: number;
-  servicePrice?: number;
+  service?: number;
 };

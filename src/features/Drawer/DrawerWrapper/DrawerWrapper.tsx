@@ -1,17 +1,18 @@
 /** @format */
 
 import { FC, useMemo } from "react";
-import { Props } from "./types";
 import {
   Counter,
   DropdownComp,
   ListItem,
+  SVGIcon,
   TotalCost,
-  TrashIcon,
 } from "~/components";
+import { Props } from "./types";
 import { PlusOutlined } from "@ant-design/icons";
 import { useListStore, useStore } from "~/store";
 import "./style.css";
+import numeral from "numeral";
 
 export const DrawerWrapper: FC<Props> = ({
   data,
@@ -50,14 +51,16 @@ export const DrawerWrapper: FC<Props> = ({
                       <button onClick={() => deleteItem(item.id)}>Xoá</button>
                     ),
                     key: "1",
-                    icon: <TrashIcon />,
+                    icon: <SVGIcon name="trash" />,
                   },
                   { type: "divider" },
                 ]}
               />
               <div className="drawer-name">{item.name}</div>
             </div>
-            <div className="drawer-price">{item.price}</div>
+            <div className="drawer-price">
+              {numeral(item.price).format("0, 0")}
+            </div>
             <Counter
               count={item.quantity}
               handleIncrease={() => increase(item.id)}
@@ -74,7 +77,15 @@ export const DrawerWrapper: FC<Props> = ({
           </div>
         </div>
       ))}
-      <TotalCost sum={totalCost} VAT={10000} />
+      <TotalCost totalCost={totalCost} VAT={10000} service={0}>
+        <div></div>
+        <div className="pl-[40px] title flex flex-col gap-[8px]">
+          <p>Tổng tiền</p>
+          <p>VAT</p>
+          <p>Phí Dịch Vụ</p>
+          <p>Tổng tiền</p>
+        </div>
+      </TotalCost>
     </div>
   );
 };

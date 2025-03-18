@@ -8,6 +8,5 @@ export * from "./Counter";
 export * from "./Dropdown";
 export * from "./ListItem";
 export * from "./Slider";
-export * from "./TrashIcon";
 export * from "./TotalCost";
 export * from "./Button";
