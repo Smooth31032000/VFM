@@ -2,8 +2,8 @@
 import type { MenuProps } from "antd";
 import { Dropdown, Space } from "antd";
 import { FC } from "react";
-import icon from "~/assets/icons/circleVertical.svg";
 import "./style.css";
+import { SVGIcon } from "../SVGIcon";
 
 export const DropdownComp: FC<MenuProps> = ({ items, className = "" }) => {
   return (
@@ -17,7 +17,7 @@ export const DropdownComp: FC<MenuProps> = ({ items, className = "" }) => {
         <a onClick={(e) => e.preventDefault()}>
           <Space>
             <div className={` ${className}`}>
-              <img src={icon} alt="icon" />
+              <SVGIcon name="circleVertical" />
             </div>
           </Space>
         </a>
