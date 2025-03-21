@@ -1,9 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Layout from '~/layout/Layout';
-import HomePage from '~/pages/Home/HomePage';
-import { ROUTE_PATH } from "./routes.constant";
-import LoginPage from "~/pages/Login/LoginPage";
 import AuthLayout from "~/layout/AuthLayout";
+import Layout from "~/layout/Layout";
+import HomePage from "~/pages/Home/HomePage";
+import LoginPage from "~/pages/Login/LoginPage";
+import ProductPage from "~/pages/Product/ProductPage";
+import { ROUTE_PATH } from "./routes.constant";
+import ProductDetail from "~/pages/Product/ProductDetail";
 export const routers = createBrowserRouter([
   {
     id: "root",
@@ -14,11 +16,21 @@ export const routers = createBrowserRouter([
         path: "/",
         Component: HomePage,
       },
+      {
+        id: "product",
+        path: ROUTE_PATH.PRODUCT,
+        Component: ProductPage,
+      },
+      {
+        id: "product-detail",
+        path: ROUTE_PATH.PRODUCT_DETAIL,
+        Component: ProductDetail,
+      },
     ],
   },
   {
     id: "auth",
-    Component: AuthLayout, // Sử dụng AuthLayout cho login
+    Component: AuthLayout,
     children: [
       {
         id: "login",

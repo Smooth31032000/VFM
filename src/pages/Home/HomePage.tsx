@@ -52,7 +52,7 @@ function HomePage() {
                 key={item.id}
                 id={item.id}
                 image={item.image}
-                rating={4.0}
+                rating={item.rating}
                 name={item.name}
                 price={item.price}
                 priceDiscount={item.priceDiscount}
@@ -67,7 +67,7 @@ function HomePage() {
         )}
       </div>
 
-      {/* <div className="combo">
+      <div className="combo">
         <div className="grid grid-cols-2 items-center">
           <h1 className="text-white text-[20px] font-medium">Combo</h1>
           <a
@@ -77,23 +77,31 @@ function HomePage() {
             Xem thêm
           </a>
         </div>
-        <div className="grid max-sm:grid-cols-2 sm:grid-cols-3 gap-2">
-          {ProductItemData.map((item: any) => (
-            <ProductItem
-              key={item.id}
-              id={item.id}
-              image={item.image ?? "undefined"}
-              rating={4.0}
-              name={item.name}
-              price={item.price}
-              priceDiscount={item.priceDiscount}
-              productType={item.productType}
-              shortDescription={item.shortDescription}
-              onClick={() => console.log("click", item.id)}
-            />
-          ))}
-        </div>
-      </div> */}
+        {isLoading ? (
+          <div className="flex justify-center items-center">
+            <Loading />
+          </div>
+        ) : (
+          <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-2">
+            {productData?.map((item: ProductItemProps) => (
+              <ProductItem
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                rating={item.rating}
+                name={item.name}
+                price={item.price}
+                priceDiscount={item.priceDiscount}
+                productType={item.productType}
+                shortDescription={item.shortDescription}
+                onClick={() =>
+                  addDrawerItem(item.id ?? "", item.name, item.price)
+                }
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

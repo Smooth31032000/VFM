@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { ButtonCancel, ButtonSuccess } from "~/components";
+import { Button } from "~/components";
 import Header from "~/components/Header/Header";
 import { DrawerComp } from "~/features/Drawer/DrawerComp";
 import { DrawerWrapper } from "~/features/Drawer/DrawerWrapper";
@@ -46,8 +46,17 @@ export default function Layout() {
           />
         </div>
         <div className="flex gap-2 absolute bottom-3 right-3">
-          <ButtonCancel handleOnclick={closeDrawer} text="Huỷ" />
-          <ButtonSuccess text="Thanh Toán" />
+          <Button
+            className="bg-green-500 text-white w-[125px] h-[31px] rounded-md"
+            size="14px"
+            handleOnclick={closeDrawer}
+            text="Huỷ"
+          />
+          <Button
+            className="w-[125px] h-[31px] bg-white text-black rounded-md"
+            size="14px"
+            text="Thanh toán"
+          />
         </div>
       </DrawerComp>
       <main className="pt-[30px] px-5 bg-primary-light relative">

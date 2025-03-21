@@ -10,7 +10,7 @@ export default function LoginPage() {
 
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 1000);
 
   return (
     <div className=" flex min-h-full gap-8 flex-col justify-center ">

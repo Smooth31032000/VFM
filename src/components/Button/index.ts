@@ -1,4 +1,3 @@
 /** @format */
 
-export * from "./ButtonCancel";
-export * from "./ButtonSuccess";
+export * from "./Button";

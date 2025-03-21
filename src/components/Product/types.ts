@@ -8,4 +8,5 @@ export interface Props {
   productType: "HOT" | "NEWS" | "NORMAL";
   priceDiscount: number;
   onClick?: () => void;
+  handleOnClick?: () => void;
 }

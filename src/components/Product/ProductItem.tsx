@@ -6,19 +6,21 @@ import { Props } from './types';
 import { SVGIcon } from '../SVGIcon';
 
 
-export const  ProductItem: FC<Props> = ({
+export const ProductItem: FC<Props> = ({
   rating,
   name,
   price,
   priceDiscount,
   shortDescription,
   image,
-  productType = 'NORMAL',
+  productType = "NORMAL",
   onClick,
-})  => {
+  handleOnClick,
+}) => {
   return (
     <div className="rounded-lg border-[1.5px] border-white relative overflow-hidden min-h-[200px] flex-1">
       <img
+        onClick={handleOnClick}
         src={image}
         alt={name}
         className="w-full h-full z-[1] absolute top-0 right-0 object-cover"
@@ -70,5 +72,5 @@ export const  ProductItem: FC<Props> = ({
       </div>
     </div>
   );
-}
+};
 
